@@ -1,0 +1,370 @@
+sudo 
+echo hello world
+echo hello ; echo hello2
+"echo hello ; echo hello2"
+echo "hello ; echo hello2"
+echo "$SHELL"
+echo 'DATE'
+echo `date`
+echo $SHELL
+echo HOLA
+echo "this is\
+seguira \
+hasta \
+que cierre las comillas"
+echo "si utilizamos \\
+y enter salta la linea pero luego sale solo una\
+"
+echo "si utilizamos el control+c\
+no se veran las lineas extra como en el \
+ejemplo de arriba"
+echo"se utiliza \npara nueva linea"
+echo "esto \n es nueva linea"
+echo "se utiliza \t tabulador"
+echo "se utiliza el \" para que tome las comillas\
+como texto"
+echo "la barra invertida se utiliza para anular comandos"
+cat /proc/cpuinfo ; echo se utiliza para leer el archivo, asi puedo mirar el procesador del sistema virtual"\
+"
+cd 
+cd Data/shell
+cd ../airline_tickets
+cd
+cd -
+cd ../
+cd shell
+cat Text_example.txt
+cat -n Text_example.txt
+cat -n Text_example.txt Text_example.txt Text_example.txt
+cd 
+cat Data/shell/Text_example.txt
+cat ./Data/shell/Text_example.txt
+echo "se utiliza el . para ver los directorios de abajo"
+cd Data
+pwd
+cd
+pwd
+ls
+cd Data/challenge
+ls
+cd
+cd anaconda3
+ls
+ls -1
+ls -s
+ls -1s
+ls -a echo "para ver los ocultos"
+ls -a
+cd
+cd .dropbox
+echo asi seleccionamos los ocultos
+cd
+ls -la
+ls Data
+ls -l Data
+history
+echo cambiar permisos en fichero creado
+touch file00
+ls file00
+los -l file00
+ls -l file00
+chmod u+x,g-w,o+w file00
+ls -l file00
+chmod 777 file00
+esto es porque rwx=111=2(2)*1+2(2)*0+2(1)*1 = 7 no se sie sta bien
+crear un directorio
+mkdir my_first_dir
+ls -l
+mkdir directorio_1 directorio_2
+ls -l
+mkdir -p directorio_3/directorio
+cd directorio_3/directorio
+cd
+borrar directorio
+rm directorio_3
+rm -r directorio_3
+rm file00
+rm -r directorio_1 directorio_2
+ls -l
+copiar fichero
+touch fichero2
+cp fichero2 fichero3
+ls -l
+seguir en el history de clase
+mkdir first_dir
+cd first_dir
+touch text_file.txt
+ls
+cgmod g+e,u+w text_file.txt
+chmod g+e,u+w text_file.txt
+chmod g+x,u+w text_file.txt
+mkdir sub1 sub2 text_file
+mv text_file.txt sub1
+cd sub1
+gitconfig
+%git config --global user.name "Andoni Azkonobieta"
+git config --global user.name "Andoni Azkonobieta"
+git config --global user.email "aazkonobieta31@gmail.com"
+cat .gitconfig
+cd
+cat .gitconfig
+gedit .gitconfig
+pwd
+mkdir git
+cd git
+echo "# shell" >> README.md
+pwd
+ls
+cat README.md
+git init
+comprobar si hay algun usuario creado
+git config -- get user.name
+git config --get user.name
+git add README.md
+con esto hemos hecho leible el README para Git
+git status"\
+"
+git status
+por esto hay que usar commit para confirmar los cambios
+git commit -m "first commitadding README.md"
+git branch -M main
+git status
+cd
+cd git
+cambiamos el nombre del BRANCH, no se crea nuevo
+git branch -M master
+git remote add origin https://github.com/AndoniAzko/shell.git
+vamos a enviar lo creado al repositorio GIT creado
+git push -u origin master
+cd git
+git push -u origin master
+cd git
+git push -u origin master
+git config -- global credential.helper store
+git config --global credential.helper store
+cd
+cd data
+cd Data/opentraveldata
+head optd_airlines.csv
+cd
+cd Data/shell
+less Finn.txt
+cd ..
+cd opentraveldata
+less optd_aircraft.csv
+cd
+bash
+ll
+whoami
+zsh
+echo SHELL
+echo $SHELL
+ECHO $SHELL
+echo $TERM
+whoami
+echo $HOST
+echo $USER
+printenv
+cd anaconda3
+..
+../
+cd ../
+printev USER
+printenv USER
+echo this is backlash \\ 
+echo "Hello \"World\""
+echo "this is \n new line"
+echo this is echo of echo
+echo this is \; echo of echo
+pwd
+echo $PWD
+$PWD
+echo \$PWD
+is
+cd is
+cd anaconda3 is -a
+cd -a
+cd anaconda3/shell/condabin
+-l
+-L
+-I
+ls -l
+echo $HISTFILE
+ls -l /home/dsc/.history
+ll $HISTFILE
+rsync -avz
+(se utiliza para copiar carpetas o archivos) -rsync -avz /folder1 /folder2 
+se sincroniza el primer archivo en el segundo, osea lo reemplaza si existe o añade algo
+cd git
+cp /home/.history history_20201117.txt
+cp /home/dsc/.history history_20201117.txt
+ls
+git status
+git add history_20201117.txt
+git commit
+cd git
+git commit history_20201117.txt
+git status
+seguireos a final de clase para hacer lo mismo
+cd ..
+ls -l
+cd data
+cd Data
+cd shell
+ll
+wc Text_example.txt
+head -n 8 Text_example.txt
+wc -w Text_example.txt
+wc -l Text_example.txt
+clear
+echo "Hola"
+echo "Hola" | wc
+echo -n | wc
+echo -n "Hola" | wc
+cat Text_example.txt | wc
+cat Text_example.txt | wc-l
+cat Text_example.txt | wc -l
+wc Text_example.txt
+tail -c -1k optd_aircraft.csv|wc
+cd /home
+cd ..
+cd home
+cd ..
+pwd
+cd home/dsc
+cd Data/opentraveldata
+pwd
+ll
+aqui seguiriamos el ejercicio
+ll
+ls
+ls -lrt
+ls -lrt | head -n 2
+ls -lrt | tail -n 2
+ls -lrt | tail -n 1
+ls -sSl
+ls -sSlr
+touch largest_file.txt
+ls -sSlr | tail -n 1 > largest_file.txt
+cat largest_file.txt
+cd ..
+cd shell
+head -n 5 Finn.txt | wc -w
+cat -n Finn.txt | head -n 3
+cd ..
+locate Text_example.txt
+head -n Data/shell/Text_example.txt > Text_example2.txt
+head -n 10 Data/shell/Text_example.txt > Text_example2.txt
+cat Text_example2.txt
+cat -n Data/shell/Text_example.txt | head -n 10 > Text_example2.txt
+cat Text_example2.txt
+parentesis, para buscar algo en el history:
+cat /.history | grep rsync
+cat .history | grep rsync
+usariamos el comando .history -i o el otro
+cat .history | grep release
+cd git
+cp $HISTFILE Home/dsc/git/history_2020117.txt
+cp $HISTFILE /Home/dsc/git/history_2020117.txt
+cp $HISTFILE history_20201117.txt
+git add history_20201117.txt
+git commit -m "historial del dia"
+git push -u origin master
+ls
+ls -l
+ls s
+lss
+ls -s
+cat Text_example.txt
+location  Text_example.txt
+locate  Text_example.txt
+cat  Text_example2.txt
+cat /home/dsc/Data/shell/Text_example.txt > text2.txt
+cat text2.txt
+cat text2.txt > text2.txt
+cat text2.txt
+ls
+cat text2.txt
+cat /home/dsc/Data/shell/Text_example.txt > text2.txt
+cat text2.txt
+cat text2.txt > textdouble.txt
+cat textdouble.txt
+cat text2.txt >> textdouble.txt
+cat textdouble.txt
+echo "Hola \nmundo"
+echo 'echo "Hola \nmundo"'
+echo 'echo "Hola \nmundo"' > holamundo.sh
+gedit holamundo.sh
+bash holamundo.sh
+./holamundo.sh
+gedit holamundo.sh
+./holamundo.sh
+gedit holamundo.sh
+se puede meter el $ para poder meter inputs al ejecutar el script
+/holamundo.sh
+whoami
+.cd git
+cd git
+ls
+cd ..
+touch Ejercicio01
+ls
+rm Ejercicio01
+ls
+touch Ejercicio01.sh
+cd git
+gitclone github.com/rgomezh/campechano.git
+git clone github.com/rgomezh/campechano.git
+git clone https://github.com/rgomezh/campechano.git
+rm campechano
+rm -rf campechano
+cd ..
+touch gitequipo
+ls
+mkdir gitequipo
+rm gitequipo
+mkdir gitequipo
+cd gitequipo
+git clone https://github.com/rgomezh/campechano.git
+git status
+cd campechano
+git checkout -b ejercicio1
+touch ejercicio1
+rm ejercicio1
+touch ejercicio1.sh
+gedit ejercicio.sh
+cd ../..
+cd Data/opentraveldata
+ls
+ls -l
+cd ..
+cd gitequipo/campechano
+gedit ejercicio1.sh
+locate opentraveldata
+gedit ejercicio1.sh
+chmod +x
+chmod +x ejercicio1.sh
+mv ejercicio1.sh 001.sh
+ls
+rm ejercicio.sh
+./001.sh
+ls
+cat 001.out
+gedit 001.sh
+ls -lS /home/dsc/Data/opentraveldata | head -n 1
+ls -lSr /home/dsc/Data/opentraveldata | head -n 1
+ls -Slr /home/dsc/Data/opentraveldata | tail -n 1
+gedit 001.sh
+./001.sh
+cat 001.out
+gedit 001.sh
+./001.sh
+cat 001.out
+git status
+git add 001.out
+git add --all
+git status
+git commit -m "ejercicio 1"
+git push origin ejercicio1
+cd git
+cp /home/dsc/.history history_20201118
